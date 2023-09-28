@@ -19,7 +19,7 @@
 - В появившемся диалоговом окне найдите и выберите "QCScripting.bas" и "QCScriptingEnums" (или другие необходимые модули библиотеки).
 - Нажмите "OK", чтобы добавить модули библиотеки в ваш проект.
 
-## Создание объектов Scripting.FileSystemObject
+## Создание объектов библиотеки Scripting
 
 ### Создание объекта `Scripting.Dictionary`
 
@@ -70,7 +70,7 @@ Dim standardStream As Object
 Set standardStream = NewStandardStream(qcStandardStreamTypesForInput)
 ```
 
-## Создание объекто VBScript
+## Создание объектов библиотеки VBScript
 
 ### Создание объекта `RegExp`
 
@@ -79,7 +79,7 @@ Dim regex As Object
 Set regex = NewRegExp(i:=True, g:=True, m:=False, Pattern:="\d{3}-\d{2}-\d{4}")
 ```
 
-## Создание объектов ADODB (ActiveX Data Objects)
+## Создание объектов библиотеки ADODB (ActiveX Data Objects)
 
 ### Создание объекта `ADODB.Connection`
 
@@ -123,7 +123,7 @@ Dim stream As Object
 Set stream = NewStream()
 ```
 
-## Создание объектов WScript
+## Создание объектов библиотеки WScript
 
 ### Создание объекта `WScript.Shell`
 

@@ -26,4 +26,3 @@ End Function
 Public Function NewStream() As Object
     Set NewStream = CreateObject("ADODB.Stream")
 End Function
-
