@@ -34,27 +34,3 @@ End Function
 Public Function NewStandardStream(ByVal StandardStreamType As qcStandardStreamTypes, Optional ByVal Unicode As Boolean = False) As Object
     Set NewStandardStream = NewFileSystemObject().GetStandardStream(StandardStreamType, Unicode)
 End Function
-
-Private Function CreateFoldersRecoursive(ByVal Path As String) As String
-    Dim FolderPath As String
-    Dim FolderArray() As String
-    Dim Sep As String: Sep = Application.PathSeparator
-    
-    FolderArray = Split(Path, Sep)
-    
-    Dim i As Integer
-    For i = LBound(FolderArray) To UBound(FolderArray)
-        If i = LBound(FolderArray) Then
-            FolderPath = FolderArray(i)
-            i = i + 1
-        End If
-
-        FolderPath = FolderPath & Sep & FolderArray(i)
-        Dim FSO As Object: Set FSO = NewFileSystemObject()
-        If Not FSO.FolderExists(FolderPath) Then
-            FSO.CreateFolder FolderPath
-        End If
-    Next
-
-    CreateFoldersRecoursive = FolderPath
-End Function
