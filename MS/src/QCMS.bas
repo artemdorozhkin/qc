@@ -22,8 +22,8 @@ Public Function NewPowerPoint() As Object
     Set NewPowerPoint = CreateObject("PowerPoint.Application")
 End Function
 
-Public Function NewProject() As Object
-    Set NewProject = CreateObject("MSProject.Application")
+Public Function NewMSProject() As Object
+    Set NewMSProject = CreateObject("MSProject.Application")
 End Function
 
 Public Function NewPublisher() As Object
